@@ -27,6 +27,6 @@ export class MyComponent {
   }
 
   render() {
-    return <wc-component02 name="Jordan"></wc-component02>;
+    return <wc-component02 name="Jordan" lastname="Guevara"></wc-component02>;
   }
 }

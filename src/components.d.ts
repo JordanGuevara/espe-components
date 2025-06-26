@@ -23,6 +23,7 @@ export namespace Components {
     interface Page01 {
     }
     interface WcComponent02 {
+        "lastname": string;
         "name": string;
     }
     interface WcComponents {
@@ -78,6 +79,7 @@ declare namespace LocalJSX {
     interface Page01 {
     }
     interface WcComponent02 {
+        "lastname"?: string;
         "name"?: string;
     }
     interface WcComponents {

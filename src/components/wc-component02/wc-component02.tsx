@@ -7,16 +7,22 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 
 export class WcComponent02 {
-  @Prop()
-  name: string
+  @Prop() name: string
+  @Prop() lastname: string
   render() {
     return (
       // <Host>
       //   <slot></slot>
       // </Host>
       <div>
+        <div>
         <span>{this.name}</span>
       </div>
+      <div>
+        <span>{this.lastname}</span>
+      </div>
+      </div>
+      
     );
   }
 }

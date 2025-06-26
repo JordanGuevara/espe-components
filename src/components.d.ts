@@ -20,6 +20,13 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface Page01 {
+    }
+    interface WcComponent02 {
+        "name": string;
+    }
+    interface WcComponents {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +35,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLPage01Element extends Components.Page01, HTMLStencilElement {
+    }
+    var HTMLPage01Element: {
+        prototype: HTMLPage01Element;
+        new (): HTMLPage01Element;
+    };
+    interface HTMLWcComponent02Element extends Components.WcComponent02, HTMLStencilElement {
+    }
+    var HTMLWcComponent02Element: {
+        prototype: HTMLWcComponent02Element;
+        new (): HTMLWcComponent02Element;
+    };
+    interface HTMLWcComponentsElement extends Components.WcComponents, HTMLStencilElement {
+    }
+    var HTMLWcComponentsElement: {
+        prototype: HTMLWcComponentsElement;
+        new (): HTMLWcComponentsElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "page-01": HTMLPage01Element;
+        "wc-component02": HTMLWcComponent02Element;
+        "wc-components": HTMLWcComponentsElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +75,18 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface Page01 {
+    }
+    interface WcComponent02 {
+        "name"?: string;
+    }
+    interface WcComponents {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "page-01": Page01;
+        "wc-component02": WcComponent02;
+        "wc-components": WcComponents;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +94,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "page-01": LocalJSX.Page01 & JSXBase.HTMLAttributes<HTMLPage01Element>;
+            "wc-component02": LocalJSX.WcComponent02 & JSXBase.HTMLAttributes<HTMLWcComponent02Element>;
+            "wc-components": LocalJSX.WcComponents & JSXBase.HTMLAttributes<HTMLWcComponentsElement>;
         }
     }
 }
